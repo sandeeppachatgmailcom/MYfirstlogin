@@ -1,0 +1,32 @@
+<%-include('header') -%>
+
+
+
+
+<div class="text-center center-div" id="login">
+    <div class="container w-25 border py-5 box d-flex">
+        <div class="title pb-5">
+            <h2 class="font-weight-bold">login</h2>
+            <span>Existing User!!!</span>
+        </div>
+        <form action="/router/login" method="post">
+            <% if (Message) { %>
+                <div class="message">
+                  <h6><%= Message %></h6>
+                </div>
+              <% } %>
+              
+            
+            <input name="userName" type="text" placeholder="username" onclick="DefaultClick('Username')" class="textBox" value="UseName" id="Username">
+            <input name="password" type="password" onclick="DefaultPassword('PassWord')" class="textBox" value="PassWord" id="PassWord">
+            <input name="Submit" type="submit" title="Username" class="button" value="submit" id="submit">
+        </form>
+    </div>
+</div>
+
+
+
+
+
+<%-include('footer') -%>
+
